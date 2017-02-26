@@ -1,0 +1,9 @@
+@mixin beforeContent($width, $height, $top){
+	content: '';
+	display: block;
+	width: $width;
+	height: $height;
+	position: absolute;
+	top: $top;
+	left: 45%;
+}

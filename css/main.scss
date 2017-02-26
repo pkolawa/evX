@@ -1,0 +1,109 @@
+@import 'boilerplate';
+@import 'animations';
+@import 'mixins';
+
+body{
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.wrapper{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.clr{
+	clear:both;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	background: #000;
+
+	ul.mainMenu{
+		float: right;
+		height: 100%;
+
+		li{
+			display: inline-block;
+			width: auto;
+			height: 100%;
+
+			margin: 0 10px;
+
+			.active{
+				color: #f00;
+
+				&:before{
+					content: '';
+					width: 10px;
+				}
+			}
+		}
+	}
+}
+
+main{
+	.mainRing {
+	    width:100px;
+	    height:100px;
+	    margin: 20px auto 0;
+	    color:orange;
+	    font-size:100px;
+	    line-height:1;
+	    animation: circle 5s ease-in-out 1;
+	    transform-origin:50% 200px;
+
+		.subRing {
+		   animation: inner-circle 5s ease-in-out 1;
+
+		   &.active{
+			   background: #f00;
+
+			   p{
+				   margin-top: 50px;
+			   }
+		   }
+
+		   &#audioVideo{
+			   &.active p:before{
+				@include beforeContent(50px, 50px, -50px);
+				background: url('/img/audioVideo.jpg') no-repeat bottom center;
+			   }
+		   }
+		   &#heliumBaloons{
+			   &.active p:before{
+				@include beforeContent(50px, 50px, -50px);
+				background: url('/img/heliumBaloons.jpg') no-repeat bottom center;
+			   }
+		   }
+		   &#eventFurnitures{
+			   &.active p:before{
+				@include beforeContent(50px, 50px, -50px);
+				background: url('/img/eventFurnitures.jpg') no-repeat bottom center;
+			   }
+		   }
+		   &#eventAgency{
+			   &.active p:before{
+				@include beforeContent(50px, 50px, -50px);
+				background: url('/img/eventAgency.jpg') no-repeat bottom center;
+			   }
+		   }
+		   &#integrationClub{
+			   &.active p:before{
+				@include beforeContent(50px, 50px, -50px);
+				background: url('/img/integrationClub.jpg') no-repeat bottom center;
+			   }
+		   }
+	   }
+	}
+}
+
+footer{
+	background: rgba(0,0,0, 0.6);
+}
