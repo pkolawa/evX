@@ -94,7 +94,11 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+a,
+a:visited{
+	color: inherit;
+	text-decoration: none;
+}
 
 
 
@@ -222,7 +226,7 @@ textarea {
 
     a,
     a:visited {
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     a[href]:after {
