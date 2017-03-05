@@ -211,7 +211,15 @@ main{
 			   }
 			}
 		}
-	   	.ringsExcerpt{
+
+		.subRing.active ~ .ringsExcerpt{
+			p,a{
+				opacity: 1;
+				@include transition(0.5s, linear);
+			}
+		}
+
+	   	.subRing ~ .ringsExcerpt{
 	   		font-size: 1.33rem;
 			position: absolute;
 			z-index: 5;
@@ -225,6 +233,8 @@ main{
 				height: 30%;
 				width: 45%;
 				margin: 25% 27.5%;
+				opacity: 0;
+				@include transition(0.5s, linear);
 			}
 
 		    a{
@@ -239,6 +249,8 @@ main{
 			   text-align: center;
 			   display: block;
 			   line-height: 80px;
+			   opacity: 0;
+			   @include transition(0.5s, linear);
 		   }
 	   	}
 	}
