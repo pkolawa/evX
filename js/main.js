@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).load(function(){
 	mainRingResize();
 });
 
@@ -9,25 +9,38 @@ $(window).resize(function(){
 function mainRingResize(){
 	var headerHeight = $('header').height();
 	var footerHeight = $('footer').height();
-	var mainRingHeight = $(window).height() - headerHeight - footerHeight;
-	// alert(headerHeight);
-	$('.mainRing').css({"width":mainRingHeight+"px","height":mainRingHeight+"px", "margin-top":headerHeight+"px"});
+	var windowHeight = $(window).height();
+	var windowWidth = $(window).width();
+	if(windowWidth > 600){
+		if(windowHeight > windowHeight){
+			var mainRingHeight = windowWidth - 50;
+		}else{
+			var mainRingHeight = windowHeight - headerHeight - footerHeight;
+		}
+
+		console.log("width: "+ windowWidth +", height: " + windowHeight +", mainRingHeight:" + mainRingHeight);
+		$('.mainRing').css({"width":mainRingHeight+"px","height":mainRingHeight+"px", "margin-top":headerHeight+"px"});
+	}
 }
 
 $('.subsectionTrigger').on('click', function(){
 	let formerClass = $('body').attr('class');
 	let newClass = $(this).attr('data-subsection');
 
-	if(formerClass !== undefined){
-		$('body').removeClass(formerClass);
-	}
-	if($('header li.active').attr('data-subsection') !== newClass){
-		$('header li.active').removeClass('active');
-		$('header li[data-subsection="'+newClass+'"]').addClass('active');
+	var image = new Image();
+	image.src = "img/"+ newClass +"_background.jpg";
 
-		$('.subRing.active').removeClass('active');
-		$('.subRing[data-subsection="'+newClass+'"]').addClass('active');
-	}
+	image.onload = function(){
+		if(formerClass !== undefined){
+			$('body').removeClass(formerClass);
+		}
+		if($('header li.active').attr('data-subsection') !== newClass){
+			$('header li.active').removeClass('active');
+			$('header li[data-subsection="'+newClass+'"]').addClass('active');
 
-	$('body').addClass(newClass);
+			$('.subRing.active').removeClass('active');
+			$('.subRing[data-subsection="'+newClass+'"]').addClass('active');
+		}
+		$('body').addClass(newClass);
+	}
 });
