@@ -24,11 +24,11 @@
 			<div class="wrapper">
 				<img src="./img/eventX-logo.jpg" class="mainLogo" alt="eventx.pl - " />
 				<ul class="mainMenu">
-					<a href="#audioVideo" title="audio - video"><li>Audio - Video</li></a>
-					<a href="#heliumBaloons" title="balony na hel"><li>Balony na hel</li></a>
-					<a href="#eventFurnitures" title="prominent"><li>Prominent</li></a>
-					<a href="#eventAgency" title="meble eventowe"><li>Meble eventowe</li></a>
-					<a href="#integrationClub" title="agencja eventowa"><li>Agencja eventowa</li></a>
+					<a href="#audioVideo" title="audio - video"><li class="subsectionTrigger" data-subsection="audioVideo">Audio - Video</li></a>
+					<a href="#heliumBaloons" title="balony na hel"><li class="subsectionTrigger" data-subsection="heliumBaloons">Balony na hel</li></a>
+					<a href="#integrationClub" title="prominent"><li class="subsectionTrigger" data-subsection="integrationClub">Prominent</li></a>
+					<a href="#eventFurnitures" title="meble eventowe"><li class="subsectionTrigger" data-subsection="eventFurnitures">Meble eventowe</li></a>
+					<a href="#eventAgency" title="agencja eventowa"><li class="subsectionTrigger" data-subsection="eventAgency">Agencja eventowa</li></a>
 				</ul>
 				<div class="clr"></div>
 			</div>
@@ -37,19 +37,19 @@
 		<main>
 			<div class="wrapper">
 				<div class="mainRing">
-					<div class="subRing" id="audioVideo">
+					<div class="subRing subsectionTrigger" data-subsection="audioVideo" id="audioVideo">
 						<h2>Wypożyczalnia audio video</h2>
 					</div>
-					<div class="subRing" id="heliumBaloons">
+					<div class="subRing subsectionTrigger" data-subsection="heliumBaloons" id="heliumBaloons">
 						<h2>Balony na hel</h2>
 					</div>
-					<div class="subRing" id="eventFurnitures">
+					<div class="subRing subsectionTrigger" data-subsection="eventFurnitures" id="eventFurnitures">
 						<h2>Meble eventowe</h2>
 					</div>
-					<div class="subRing" id="eventAgency">
+					<div class="subRing subsectionTrigger" data-subsection="eventAgency" id="eventAgency">
 						<h2>Agencja eventowa organizacja imprez</h2>
 					</div>
-					<div class="subRing" id="integrationClub">
+					<div class="subRing subsectionTrigger" data-subsection="integrationClub" id="integrationClub">
 						<h2>Klub na imprezę integracyjną</h2>
 					</div>
 					<div class="ringsExcerpt">
@@ -62,20 +62,6 @@
 
 		<footer>
 			<div class="wrapper">
-				<div class="footerExcerpt">
-					<h3>Dane korespondencyjne</h3>
-					<p>
-						EventX Maciej Heród, al. Pokoju 8 lok. 11,<br>
-						31-584 Kraków, NIP: 869-184-37015
-					</p>
-				</div>
-				<div class="footerExcerpt">
-					<h3>Magazyn punkt odbioru</h3>
-					<p>
-						ul. Ostatnia 1c Strefa D, 31-444 Kraków<br>
-						<a href="https://www.google.pl/maps/place/Ostatnia+1C,+31-444+Kraków/@50.0708293,19.9756617,17.12z/data=!4m5!3m4!1s0x47165ad7fb566573:0x6d8d323748d109d3!8m2!3d50.070769!4d19.978115" tagret="_blank">mapa</a>
-					</p>
-				</div>
 				<div class="footerList">
 					<ul id="partnersList">
 						<li>
@@ -97,6 +83,20 @@
 							<img src="./img/playstation-logo.png" alt="Logo Play Station"/>
 						</li>
 					</ul>
+				</div>
+				<div class="footerExcerpt" id="magazyn">
+					<h3>Magazyn punkt odbioru</h3>
+					<p>
+						ul. Ostatnia 1c Strefa D, 31-444 Kraków<br>
+						<a href="https://www.google.pl/maps/place/Ostatnia+1C,+31-444+Kraków/@50.0708293,19.9756617,17.12z/data=!4m5!3m4!1s0x47165ad7fb566573:0x6d8d323748d109d3!8m2!3d50.070769!4d19.978115" tagret="_blank">mapa</a>
+					</p>
+				</div>
+				<div class="footerExcerpt" id="kontakt">
+					<h3>Dane korespondencyjne</h3>
+					<p>
+						EventX Maciej Heród, al. Pokoju 8 lok. 11,<br>
+						31-584 Kraków, NIP: 869-184-37015
+					</p>
 				</div>
 				<div class="clr"></div>
 			</div>

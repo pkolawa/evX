@@ -5,5 +5,13 @@
 	height: $height;
 	position: absolute;
 	top: $top;
-	left: 45%;
+	left: 38%;
+	opacity: 1;
+}
+
+@mixin transition($seconds, $easing){
+	transition: $seconds $easing;
+	-ms-transition: $seconds $easing;
+	-webkit-transition:  $seconds $easing;
+	-moz-transition: $seconds $easing;
 }
