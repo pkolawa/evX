@@ -2,6 +2,8 @@
 @import 'animations';
 @import 'mixins';
 
+@font-face { font-family: 'Bebas Neue'; src: url('./BebasNeue.otf'); } 
+
 body{
 	text-transform: uppercase;
 	color: #fff;
