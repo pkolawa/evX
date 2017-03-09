@@ -76,7 +76,6 @@ body{
 	background: url('../img/background.jpg') repeat;
 	width: 100%;
 	padding-bottom: 120px;
-	content: '';
 	@include transition(1s, linear);
 
 	&.audioVideo{
@@ -149,8 +148,9 @@ main{
 			}
 
 			h2{
-				padding: 40% 20%;
+				padding: 40% 10%;
 				margin-top: 0;
+				font-size: 1em;
 				@include transition(0.3s, ease-in-out);
 
 				&:before{
@@ -227,7 +227,7 @@ main{
 			z-index: 5;
 			width: 75%;
 			height: 75%;
-			margin: 12.5%;
+			margin: 17% 12.5% 0;
 			border-radius: 50%;
 			border: 1px solid rgba(255,255,255, 0.5);
 
@@ -244,7 +244,7 @@ main{
 			   position: absolute;
 			   left: 50%;
 			   transform: translateX(-50%);
-			   top: 65%;
+			   top: 50%;
 			   width: 80px;
 			   height: 80px;
 			   border-radius: 50%;
@@ -308,15 +308,18 @@ footer{
 			.subRing {
 				width: 30%;
 				height: 30%;
-				font-size: 0.9pc;
+				font-size: 0.2em;
 			    transform: translateX(-50%);
 
-			}
-		   	.ringsExcerpt{
+				& ~ .ringsExcerpt{
+					font-size: 0.2em;
 
-			    a{
-			   }
-		   	}
+				    a{
+						top: 52%;
+				   }
+			   	}
+			}
+
 		}
 	}
 }
@@ -325,7 +328,8 @@ footer{
 	main{
 		.mainRing{
 			.subRing{
-				width: 40%;
+				width: 200px;
+				height: 200px;
 				margin: 0 4%;
 				display: inline-block;
 				position: relative;
@@ -355,14 +359,27 @@ footer{
 	}
 
 	footer{
-		.footerList{
+		height: auto;
 
+		.footerList{
+			width: 100%;
+			display: block;
+			ul{
+				li{
+					width: 14%;
+					padding: 0 1%;
+				}
+			}
 		}
 		.footerExcerpt{
-			width: 48%;
+			width: 46%;
 			margin: 0 0.5%;
-			padding: 0;
+			padding: 0 0 0 2%;
 			display: inline-block;
+
+			h3{
+				font-size: 1.2em;
+			}
 
 			&#magazyn{
 				text-align: left;
@@ -380,10 +397,26 @@ footer{
 		text-align: center;
 
 		.footerList{
-
+			ul{
+				li{
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
 		}
 		.footerExcerpt{
+			width: 96%;
+			margin: 0;
+			padding: 0 2%;
 
+			&#magazyn{
+				text-align: center;
+			}
+			&#kontakt{
+				text-align: center;
+			}
 		}
 	}
 }

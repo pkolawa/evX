@@ -14,7 +14,7 @@ function mainRingResize(){
 
 	if(windowWidth > 600){
 		if(windowWidth > (windowHeight - headerHeight - footerHeight)){
-			var mainRingHeight = windowHeight - headerHeight - footerHeight - 50;
+			var mainRingHeight = windowHeight - headerHeight - footerHeight - 10;
 		}else{
 			var mainRingHeight = windowWidth - 100;
 		}
