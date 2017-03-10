@@ -26,12 +26,23 @@ header{
 	left: 0;
 	width: 100%;
 	height: 90px;
+	z-index: 20;
 	font-size: 1.66rem;
 	background: #000;
 
 	img{
 		height: 100%;
 		margin-left: 30px;
+	}
+
+	.menuButton{
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: url('../img/menuButton.jpg') no-repeat top center;
+		height: 100%;
+		width: 60px;
 	}
 
 	ul.mainMenu{
@@ -322,12 +333,89 @@ footer{
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px){
+	header{
+		font-size: 1.2em;
+	}
 	main{
 		.mainRing{
 			.subRing{
-				width: 200px;
-				height: 200px;
+				&#audioVideo.active,
+				&#heliumBaloons.active,
+				&#eventFurnitures.active,
+				&#eventAgency.active,
+				&#integrationClub.active{
+					h2{
+						font-size: 0.8em;
+
+						&:before{
+							width: 40px;
+							height: 40px;
+							top: 30px;
+							left: 34%;
+							background-size: contain;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	header{
+
+		.menuButton{
+			display: block;
+		}
+
+		ul.mainMenu{
+			height: 0;
+			position: absolute;
+			top: 90px;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+			li{
+				height: 0px;
+				overflow: hidden;
+			}
+		}
+
+		ul.mainMenu.expanded{
+			float: none;
+
+			a{
+				display: block;
+			}
+
+			li{
+				display: block;
+				text-align: center;
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				background: #000;
+				border-bottom: 1px solid rgba(255,255,255, 0.3);
+				margin: 0;
+
+				&.active{
+					color: #f00;
+
+					&:before{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	main{
+		.mainRing{
+			.subRing{
+				width: 180px;
+				height: 180px;
 				margin: 0 4%;
 				display: inline-block;
 				position: relative;
@@ -358,6 +446,7 @@ footer{
 
 	footer{
 		height: auto;
+		position: relative;
 
 		.footerList{
 			width: 100%;
@@ -420,6 +509,14 @@ footer{
 }
 
 @media (max-width: 320px) {
+	main{
+		.mainRing{
+			.subRing{
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
 	footer{
 
 		.footerList{

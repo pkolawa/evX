@@ -248,11 +248,20 @@ header {
   left: 0;
   width: 100%;
   height: 90px;
+  z-index: 20;
   font-size: 1.66rem;
   background: #000; }
   header img {
     height: 100%;
     margin-left: 30px; }
+  header .menuButton {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/menuButton.jpg") no-repeat top center;
+    height: 100%;
+    width: 60px; }
   header ul.mainMenu {
     float: right;
     height: 100%;
@@ -539,10 +548,53 @@ footer {
         font-size: 0.2em; }
         main .mainRing .subRing ~ .ringsExcerpt a {
           top: 52%; } }
+@media (max-width: 1024px) {
+  header {
+    font-size: 1.2em; }
+
+  main .mainRing .subRing#audioVideo.active h2, main .mainRing .subRing#heliumBaloons.active h2, main .mainRing .subRing#eventFurnitures.active h2, main .mainRing .subRing#eventAgency.active h2, main .mainRing .subRing#integrationClub.active h2 {
+    font-size: 0.8em; }
+    main .mainRing .subRing#audioVideo.active h2:before, main .mainRing .subRing#heliumBaloons.active h2:before, main .mainRing .subRing#eventFurnitures.active h2:before, main .mainRing .subRing#eventAgency.active h2:before, main .mainRing .subRing#integrationClub.active h2:before {
+      width: 40px;
+      height: 40px;
+      top: 30px;
+      left: 34%;
+      background-size: contain; } }
 @media (max-width: 600px) {
+  header .menuButton {
+    display: block; }
+  header ul.mainMenu {
+    height: 0;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    header ul.mainMenu li {
+      height: 0px;
+      overflow: hidden; }
+  header ul.mainMenu.expanded {
+    float: none; }
+    header ul.mainMenu.expanded a {
+      display: block; }
+    header ul.mainMenu.expanded li {
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      background: #000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 0; }
+      header ul.mainMenu.expanded li.active {
+        color: #f00; }
+        header ul.mainMenu.expanded li.active:before {
+          display: none; }
+
   main .mainRing .subRing {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin: 0 4%;
     display: inline-block;
     position: relative; }
@@ -570,7 +622,8 @@ footer {
     display: none; }
 
   footer {
-    height: auto; }
+    height: auto;
+    position: relative; }
     footer .footerList {
       width: 100%;
       display: block; }
@@ -604,6 +657,10 @@ footer {
       footer .footerExcerpt#kontakt {
         text-align: center; } }
 @media (max-width: 320px) {
+  main .mainRing .subRing {
+    width: 100px;
+    height: 100px; }
+
   footer .footerList {
     float: none;
     width: 100%;

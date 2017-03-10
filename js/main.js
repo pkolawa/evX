@@ -47,3 +47,7 @@ $('.subsectionTrigger').on('click', function(){
 		$('body').addClass(newClass);
 	}
 });
+
+$('.menuButton').on('click', function() {
+  $('.mainMenu').toggleClass('expanded');
+});
