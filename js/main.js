@@ -16,7 +16,7 @@ function mainRingResize(){
 		if(windowWidth > (windowHeight - headerHeight - footerHeight)){
 			var mainRingHeight = windowHeight - headerHeight - footerHeight - 10;
 		}else{
-			var mainRingHeight = windowWidth - 200;
+			var mainRingHeight = windowWidth - 100;
 		}
 	}else{
 		$('.mainRing').removeAttr('style');

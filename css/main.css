@@ -230,6 +230,9 @@ a:hover {
     transform: rotate(0deg) translateX(-50%); }
   to {
     transform: rotate(-360deg) translateX(-50%); } }
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("./BebasNeue.otf"); }
 body {
   text-transform: uppercase;
   color: #fff;
