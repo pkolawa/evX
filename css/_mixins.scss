@@ -1,11 +1,11 @@
-@mixin beforeContent($width, $height, $top){
+@mixin beforeContent($width, $height, $top, $left){
 	content: '';
 	display: block;
 	width: $width;
 	height: $height;
 	position: absolute;
 	top: $top;
-	left: 38%;
+	left: $left;
 	opacity: 1;
 }
 

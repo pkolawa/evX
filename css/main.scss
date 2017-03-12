@@ -176,9 +176,10 @@ main{
 				left: 27%;
 
 			   &.active h2:before{
-				@include beforeContent(50px, 50px, 50px);
+				@include beforeContent(50px, 50px, 50px, 38%);
 				@include transition(0.5s, ease-in-out);
 				background: url('../img/audioVideo.jpg') no-repeat bottom center;
+				background-size: contain;
 			   }
 			}
 			&#heliumBaloons{
@@ -186,9 +187,10 @@ main{
 				left: 73%;
 
 			   &.active h2:before{
-				@include beforeContent(50px, 50px, 50px);
+				@include beforeContent(50px, 50px, 50px, 38%);
 				@include transition(0.5s, ease-in-out);
 				background: url('../img/heliumBaloons.jpg') no-repeat bottom center;
+				background-size: contain;
 			   }
 			}
 			&#eventFurnitures{
@@ -196,9 +198,10 @@ main{
 				left: 87.5%;
 
 			   &.active h2:before{
-				@include beforeContent(50px, 50px, 50px);
+				@include beforeContent(50px, 50px, 50px, 38%);
 				@include transition(0.5s, ease-in-out);
 				background: url('../img/eventFurnitures.jpg') no-repeat bottom center;
+				background-size: contain;
 			   }
 			}
 			&#eventAgency{
@@ -206,9 +209,10 @@ main{
 				left: 50%;
 
 			   &.active h2:before{
-				@include beforeContent(50px, 50px, 50px);
+				@include beforeContent(50px, 50px, 50px, 38%);
 				@include transition(0.5s, ease-in-out);
 				background: url('../img/eventAgency.jpg') no-repeat bottom center;
+				background-size: contain;
 			   }
 			}
 			&#integrationClub{
@@ -216,9 +220,10 @@ main{
 				left: 12.5%;
 
 			   &.active h2:before{
-				@include beforeContent(50px, 50px, 50px);
+				@include beforeContent(50px, 50px, 50px, 38%);
 				@include transition(0.5s, ease-in-out);
 				background: url('../img/integrationClub.jpg') no-repeat bottom center;
+				background-size: contain;
 			   }
 			}
 		}
@@ -310,25 +315,75 @@ footer{
 }
 
 @media (max-width: 1600px){
-	main{
-		.mainRing {
-	    	transform-origin: 50% 30%;
+	body{
+		main{
+			.mainRing {
+		    	transform-origin: 50% 30%;
 
-			.subRing {
-				width: 30%;
-				height: 30%;
-				font-size: 0.2em;
-			    transform: translateX(-50%);
-
-				& ~ .ringsExcerpt{
+				.subRing {
+					width: 30%;
+					height: 30%;
 					font-size: 0.2em;
+				    transform: translateX(-50%);
 
-				    a{
-						top: 52%;
-				   }
-			   	}
+					& ~ .ringsExcerpt{
+						font-size: 0.2em;
+
+					    a{
+							top: 52%;
+					   }
+				   	}
+				}
+
 			}
+		}
+	}
+}
 
+@media (max-width: 1366px){
+	body{
+		main{
+			.mainRing{
+				.subRing{
+					&.active ~ .ringsExcerpt{
+						p{
+							font-size: 0.8em;
+						}
+						a{
+							width: 50px;
+							height: 50px;
+							top:55%;
+							line-height: 50px;
+							font-size: 0.8em;
+						}
+					}
+					&#audioVideo,
+					&#heliumBaloons,
+					&#eventFurnitures,
+					&#eventAgency,
+					&#integrationClub{
+
+					    &.active h2:before{
+							@include beforeContent(28%, 28%, 28%, 35%);
+							background-size: contain;
+						}
+					}
+				}
+			}
+		}
+		footer{
+			.footerList{
+				width: 50%;
+
+				ul{
+					li{
+						padding: 0 1%;
+					}
+				}
+			}
+			.footerExcerpt{
+				width: 22%;
+			}
 		}
 	}
 }
@@ -340,13 +395,14 @@ footer{
 	main{
 		.mainRing{
 			.subRing{
+				font-size: 0.2em;
+
 				&#audioVideo.active,
 				&#heliumBaloons.active,
 				&#eventFurnitures.active,
 				&#eventAgency.active,
 				&#integrationClub.active{
 					h2{
-						font-size: 0.8em;
 
 						&:before{
 							width: 40px;
@@ -357,122 +413,173 @@ footer{
 						}
 					}
 				}
+				&.active ~ .ringsExcerpt{
+					font-size: 0.18em;
+
+					a{
+						line-height: 45px;
+						width: 45px;
+						height: 45px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media (max-width: 768px){
+	body{
+		footer{
+			.footerList{
+				width: 50%;
+
+				ul{
+					padding-left: 0;
+					li{
+						width: 12%;
+						margin: 0 1%;
+						padding: 0;
+
+						img{
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+			.footerExcerpt{
+				font-size: 0.8em;
+				width: 22%;
+
+				h3{
+					font-size: 1.1rem;
+				}
 			}
 		}
 	}
 }
 
 @media (max-width: 600px) {
-	header{
+	body{
+		padding-bottom: 0;
 
-		.menuButton{
-			display: block;
-		}
+		header{
 
-		ul.mainMenu{
-			height: 0;
-			position: absolute;
-			top: 90px;
-			left: 0;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-
-			li{
-				height: 0px;
-				overflow: hidden;
-			}
-		}
-
-		ul.mainMenu.expanded{
-			float: none;
-
-			a{
+			.menuButton{
 				display: block;
 			}
 
-			li{
-				display: block;
-				text-align: center;
+			ul.mainMenu{
+				height: 0;
+				position: absolute;
+				top: 90px;
+				left: 0;
 				width: 100%;
-				height: 60px;
-				line-height: 60px;
-				background: #000;
-				border-bottom: 1px solid rgba(255,255,255, 0.3);
 				margin: 0;
+				padding: 0;
 
-				&.active{
-					color: #f00;
+				li{
+					height: 0px;
+					overflow: hidden;
+				}
+			}
 
-					&:before{
-						display: none;
+			ul.mainMenu.expanded{
+				float: none;
+
+				a{
+					display: block;
+				}
+
+				li{
+					display: block;
+					text-align: center;
+					width: 100%;
+					height: 60px;
+					line-height: 60px;
+					background: #000;
+					border-bottom: 1px solid rgba(255,255,255, 0.3);
+					margin: 0;
+
+					&.active{
+						color: #f00;
+
+						&:before{
+							display: none;
+						}
 					}
 				}
 			}
 		}
-	}
-	main{
-		.mainRing{
-			.subRing{
-				width: 180px;
-				height: 180px;
-				margin: 0 4%;
+		main{
+			.mainRing{
+				.subRing{
+					width: 180px;
+					height: 180px;
+					margin: 0 4% 25px;
+					display: inline-block;
+					position: relative;
+					vertical-align: bottom;
+
+					&#audioVideo,
+					&#heliumBaloons,
+					&#eventFurnitures,
+					&#eventAgency,
+					&#integrationClub{
+						top: auto;
+						left: auto;
+						bottom: auto;
+						right: auto;
+						transform: none;
+
+					   &.active h2:before{
+						// @include beforeContent(50px, 50px, 50px, 38%);
+						}
+					}
+
+					&.active h2{
+						margin: 0;
+						padding: 60% 10% 20%;
+					}
+				}
+				.ringsExcerpt{
+					display: none;
+			   	}
+			}
+		}
+
+		footer{
+			height: auto;
+			position: relative;
+
+			.footerList{
+				width: 100%;
+				padding: 15px 0;
+				display: block;
+				ul{
+					li{
+						width: 12%;
+						padding: 0 1%;
+					}
+				}
+			}
+			.footerExcerpt{
+				width: 46%;
+				margin: 0 0.5%;
+				padding: 0 0 0 2%;
 				display: inline-block;
-				position: relative;
 
-				&#audioVideo,
-				&#heliumBaloons,
-				&#eventFurnitures,
-				&#eventAgency,
-				&#integrationClub{
-					top: auto;
-					left: auto;
-					bottom: auto;
-					right: auto;
-					transform: none;
-
-				   &.active h2:before{
-					@include beforeContent(50px, 50px, 50px);
-					@include transition(0.5s, ease-in-out);
-					background: url('../img/integrationClub.jpg') no-repeat bottom center;
-				   }
+				h3{
+					font-size: 1.2em;
 				}
-			}
-			.ringsExcerpt{
-				display: none;
-		   	}
-		}
-	}
 
-	footer{
-		height: auto;
-		position: relative;
-
-		.footerList{
-			width: 100%;
-			display: block;
-			ul{
-				li{
-					width: 14%;
-					padding: 0 1%;
+				&#magazyn{
+					text-align: left;
 				}
-			}
-		}
-		.footerExcerpt{
-			width: 46%;
-			margin: 0 0.5%;
-			padding: 0 0 0 2%;
-			display: inline-block;
-
-			h3{
-				font-size: 1.2em;
-			}
-
-			&#magazyn{
-				text-align: left;
-			}
-			&#kontakt{
-				text-align: right;
+				&#kontakt{
+					text-align: right;
+				}
 			}
 		}
 	}
@@ -509,30 +616,36 @@ footer{
 }
 
 @media (max-width: 320px) {
-	main{
-		.mainRing{
-			.subRing{
-				width: 100px;
-				height: 100px;
+	body{
+		main{
+			.mainRing{
+				.subRing{
+					width: 100px;
+					height: 100px;
+					font-size: 0.12em;
+				}
 			}
 		}
-	}
-	footer{
+		footer{
 
-		.footerList{
-			float: none;
-			width: 100%;
-			display: block;
+			.footerList{
+				float: none;
+				width: 100%;
+				display: block;
 
-			ul{
-				height: 100%;
+				ul{
+					height: 100%;
+				}
 			}
-		}
-		.footerExcerpt{
-			width: 100%;
-			margin: 0;
-			text-align: center;
-			display: block;
+			.footerExcerpt{
+				width: 100%;
+				margin: 0;
+				display: block;
+
+				h3,p{
+					text-align: center;
+				}
+			}
 		}
 	}
 }

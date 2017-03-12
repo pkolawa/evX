@@ -82,6 +82,9 @@ a:visited {
   color: inherit;
   text-decoration: none; }
 
+a:hover {
+  cursor: pointer; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -395,7 +398,8 @@ main {
           -ms-transition: 0.5s ease-in-out;
           -webkit-transition: 0.5s ease-in-out;
           -moz-transition: 0.5s ease-in-out;
-          background: url("../img/audioVideo.jpg") no-repeat bottom center; }
+          background: url("../img/audioVideo.jpg") no-repeat bottom center;
+          background-size: contain; }
       main .mainRing .subRing#heliumBaloons {
         top: 3%;
         left: 73%; }
@@ -412,7 +416,8 @@ main {
           -ms-transition: 0.5s ease-in-out;
           -webkit-transition: 0.5s ease-in-out;
           -moz-transition: 0.5s ease-in-out;
-          background: url("../img/heliumBaloons.jpg") no-repeat bottom center; }
+          background: url("../img/heliumBaloons.jpg") no-repeat bottom center;
+          background-size: contain; }
       main .mainRing .subRing#eventFurnitures {
         top: 42%;
         left: 87.5%; }
@@ -429,7 +434,8 @@ main {
           -ms-transition: 0.5s ease-in-out;
           -webkit-transition: 0.5s ease-in-out;
           -moz-transition: 0.5s ease-in-out;
-          background: url("../img/eventFurnitures.jpg") no-repeat bottom center; }
+          background: url("../img/eventFurnitures.jpg") no-repeat bottom center;
+          background-size: contain; }
       main .mainRing .subRing#eventAgency {
         bottom: 0;
         left: 50%; }
@@ -446,7 +452,8 @@ main {
           -ms-transition: 0.5s ease-in-out;
           -webkit-transition: 0.5s ease-in-out;
           -moz-transition: 0.5s ease-in-out;
-          background: url("../img/eventAgency.jpg") no-repeat bottom center; }
+          background: url("../img/eventAgency.jpg") no-repeat bottom center;
+          background-size: contain; }
       main .mainRing .subRing#integrationClub {
         top: 42%;
         left: 12.5%; }
@@ -463,7 +470,8 @@ main {
           -ms-transition: 0.5s ease-in-out;
           -webkit-transition: 0.5s ease-in-out;
           -moz-transition: 0.5s ease-in-out;
-          background: url("../img/integrationClub.jpg") no-repeat bottom center; }
+          background: url("../img/integrationClub.jpg") no-repeat bottom center;
+          background-size: contain; }
     main .mainRing .subRing.active ~ .ringsExcerpt p, main .mainRing .subRing.active ~ .ringsExcerpt a {
       opacity: 1;
       transition: 0.5s linear;
@@ -537,110 +545,149 @@ footer {
       margin: 10px 0 20px; }
 
 @media (max-width: 1600px) {
-  main .mainRing {
+  body main .mainRing {
     transform-origin: 50% 30%; }
-    main .mainRing .subRing {
+    body main .mainRing .subRing {
       width: 30%;
       height: 30%;
       font-size: 0.2em;
       transform: translateX(-50%); }
-      main .mainRing .subRing ~ .ringsExcerpt {
+      body main .mainRing .subRing ~ .ringsExcerpt {
         font-size: 0.2em; }
-        main .mainRing .subRing ~ .ringsExcerpt a {
+        body main .mainRing .subRing ~ .ringsExcerpt a {
           top: 52%; } }
+@media (max-width: 1366px) {
+  body main .mainRing .subRing.active ~ .ringsExcerpt p {
+    font-size: 0.8em; }
+  body main .mainRing .subRing.active ~ .ringsExcerpt a {
+    width: 50px;
+    height: 50px;
+    top: 55%;
+    line-height: 50px;
+    font-size: 0.8em; }
+  body main .mainRing .subRing#audioVideo.active h2:before, body main .mainRing .subRing#heliumBaloons.active h2:before, body main .mainRing .subRing#eventFurnitures.active h2:before, body main .mainRing .subRing#eventAgency.active h2:before, body main .mainRing .subRing#integrationClub.active h2:before {
+    content: '';
+    display: block;
+    width: 28%;
+    height: 28%;
+    position: absolute;
+    top: 28%;
+    left: 35%;
+    opacity: 1;
+    background-size: contain; }
+  body footer .footerList {
+    width: 50%; }
+    body footer .footerList ul li {
+      padding: 0 1%; }
+  body footer .footerExcerpt {
+    width: 22%; } }
 @media (max-width: 1024px) {
   header {
     font-size: 1.2em; }
 
-  main .mainRing .subRing#audioVideo.active h2, main .mainRing .subRing#heliumBaloons.active h2, main .mainRing .subRing#eventFurnitures.active h2, main .mainRing .subRing#eventAgency.active h2, main .mainRing .subRing#integrationClub.active h2 {
-    font-size: 0.8em; }
+  main .mainRing .subRing {
+    font-size: 0.2em; }
     main .mainRing .subRing#audioVideo.active h2:before, main .mainRing .subRing#heliumBaloons.active h2:before, main .mainRing .subRing#eventFurnitures.active h2:before, main .mainRing .subRing#eventAgency.active h2:before, main .mainRing .subRing#integrationClub.active h2:before {
       width: 40px;
       height: 40px;
       top: 30px;
       left: 34%;
-      background-size: contain; } }
+      background-size: contain; }
+    main .mainRing .subRing.active ~ .ringsExcerpt {
+      font-size: 0.18em; }
+      main .mainRing .subRing.active ~ .ringsExcerpt a {
+        line-height: 45px;
+        width: 45px;
+        height: 45px; } }
+@media (max-width: 768px) {
+  body footer .footerList {
+    width: 50%; }
+    body footer .footerList ul {
+      padding-left: 0; }
+      body footer .footerList ul li {
+        width: 12%;
+        margin: 0 1%;
+        padding: 0; }
+        body footer .footerList ul li img {
+          width: 100%;
+          height: auto; }
+  body footer .footerExcerpt {
+    font-size: 0.8em;
+    width: 22%; }
+    body footer .footerExcerpt h3 {
+      font-size: 1.1rem; } }
 @media (max-width: 600px) {
-  header .menuButton {
-    display: block; }
-  header ul.mainMenu {
-    height: 0;
-    position: absolute;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
-    header ul.mainMenu li {
-      height: 0px;
-      overflow: hidden; }
-  header ul.mainMenu.expanded {
-    float: none; }
-    header ul.mainMenu.expanded a {
+  body {
+    padding-bottom: 0; }
+    body header .menuButton {
       display: block; }
-    header ul.mainMenu.expanded li {
-      display: block;
-      text-align: center;
+    body header ul.mainMenu {
+      height: 0;
+      position: absolute;
+      top: 90px;
+      left: 0;
       width: 100%;
-      height: 60px;
-      line-height: 60px;
-      background: #000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      margin: 0; }
-      header ul.mainMenu.expanded li.active {
-        color: #f00; }
-        header ul.mainMenu.expanded li.active:before {
-          display: none; }
-
-  main .mainRing .subRing {
-    width: 180px;
-    height: 180px;
-    margin: 0 4%;
-    display: inline-block;
-    position: relative; }
-    main .mainRing .subRing#audioVideo, main .mainRing .subRing#heliumBaloons, main .mainRing .subRing#eventFurnitures, main .mainRing .subRing#eventAgency, main .mainRing .subRing#integrationClub {
-      top: auto;
-      left: auto;
-      bottom: auto;
-      right: auto;
-      transform: none; }
-      main .mainRing .subRing#audioVideo.active h2:before, main .mainRing .subRing#heliumBaloons.active h2:before, main .mainRing .subRing#eventFurnitures.active h2:before, main .mainRing .subRing#eventAgency.active h2:before, main .mainRing .subRing#integrationClub.active h2:before {
-        content: '';
+      margin: 0;
+      padding: 0; }
+      body header ul.mainMenu li {
+        height: 0px;
+        overflow: hidden; }
+    body header ul.mainMenu.expanded {
+      float: none; }
+      body header ul.mainMenu.expanded a {
+        display: block; }
+      body header ul.mainMenu.expanded li {
         display: block;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 50px;
-        left: 38%;
-        opacity: 1;
-        transition: 0.5s ease-in-out;
-        -ms-transition: 0.5s ease-in-out;
-        -webkit-transition: 0.5s ease-in-out;
-        -moz-transition: 0.5s ease-in-out;
-        background: url("../img/integrationClub.jpg") no-repeat bottom center; }
-  main .mainRing .ringsExcerpt {
-    display: none; }
-
-  footer {
-    height: auto;
-    position: relative; }
-    footer .footerList {
-      width: 100%;
-      display: block; }
-      footer .footerList ul li {
-        width: 14%;
-        padding: 0 1%; }
-    footer .footerExcerpt {
-      width: 46%;
-      margin: 0 0.5%;
-      padding: 0 0 0 2%;
-      display: inline-block; }
-      footer .footerExcerpt h3 {
-        font-size: 1.2em; }
-      footer .footerExcerpt#magazyn {
-        text-align: left; }
-      footer .footerExcerpt#kontakt {
-        text-align: right; } }
+        text-align: center;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        background: #000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 0; }
+        body header ul.mainMenu.expanded li.active {
+          color: #f00; }
+          body header ul.mainMenu.expanded li.active:before {
+            display: none; }
+    body main .mainRing .subRing {
+      width: 180px;
+      height: 180px;
+      margin: 0 4% 25px;
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom; }
+      body main .mainRing .subRing#audioVideo, body main .mainRing .subRing#heliumBaloons, body main .mainRing .subRing#eventFurnitures, body main .mainRing .subRing#eventAgency, body main .mainRing .subRing#integrationClub {
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        transform: none; }
+      body main .mainRing .subRing.active h2 {
+        margin: 0;
+        padding: 60% 10% 20%; }
+    body main .mainRing .ringsExcerpt {
+      display: none; }
+    body footer {
+      height: auto;
+      position: relative; }
+      body footer .footerList {
+        width: 100%;
+        padding: 15px 0;
+        display: block; }
+        body footer .footerList ul li {
+          width: 12%;
+          padding: 0 1%; }
+      body footer .footerExcerpt {
+        width: 46%;
+        margin: 0 0.5%;
+        padding: 0 0 0 2%;
+        display: inline-block; }
+        body footer .footerExcerpt h3 {
+          font-size: 1.2em; }
+        body footer .footerExcerpt#magazyn {
+          text-align: left; }
+        body footer .footerExcerpt#kontakt {
+          text-align: right; } }
 @media (max-width: 480px) {
   footer {
     height: auto;
@@ -657,20 +704,21 @@ footer {
       footer .footerExcerpt#kontakt {
         text-align: center; } }
 @media (max-width: 320px) {
-  main .mainRing .subRing {
+  body main .mainRing .subRing {
     width: 100px;
-    height: 100px; }
-
-  footer .footerList {
+    height: 100px;
+    font-size: 0.12em; }
+  body footer .footerList {
     float: none;
     width: 100%;
     display: block; }
-    footer .footerList ul {
+    body footer .footerList ul {
       height: 100%; }
-  footer .footerExcerpt {
+  body footer .footerExcerpt {
     width: 100%;
     margin: 0;
-    text-align: center;
-    display: block; } }
+    display: block; }
+    body footer .footerExcerpt h3, body footer .footerExcerpt p {
+      text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
