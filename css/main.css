@@ -375,6 +375,7 @@ main {
         padding: 40% 10%;
         margin-top: 0;
         font-size: 1em;
+        letter-spacing: 0.05em;
         transition: 0.3s ease-in-out;
         -ms-transition: 0.3s ease-in-out;
         -webkit-transition: 0.3s ease-in-out;
@@ -723,5 +724,19 @@ footer {
     display: block; }
     body footer .footerExcerpt h3, body footer .footerExcerpt p {
       text-align: center; } }
+@media (max-height: 740px) and (min-width: 740px) {
+  main .mainRing .subRing h2 {
+    font-size: 0.8em;
+    padding: 40% 10%; }
+  main .mainRing .subRing#audioVideo.active h2:before, main .mainRing .subRing#heliumBaloons.active h2:before, main .mainRing .subRing#eventFurnitures.active h2:before, main .mainRing .subRing#eventAgency.active h2:before, main .mainRing .subRing#integrationClub.active h2:before {
+    content: '';
+    display: block;
+    width: 28%;
+    height: 28%;
+    position: absolute;
+    top: 18%;
+    left: 35%;
+    opacity: 1;
+    background-size: contain; } }
 
 /*# sourceMappingURL=main.css.map */

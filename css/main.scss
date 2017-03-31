@@ -2,7 +2,7 @@
 @import 'animations';
 @import 'mixins';
 
-@font-face { font-family: 'Bebas Neue'; src: url('./BebasNeue.otf'); } 
+@font-face { font-family: 'Bebas Neue'; src: url('./BebasNeue.otf'); }
 
 body{
 	text-transform: uppercase;
@@ -162,6 +162,7 @@ main{
 				padding: 40% 10%;
 				margin-top: 0;
 				font-size: 1em;
+				letter-spacing: 0.05em;
 				@include transition(0.3s, ease-in-out);
 
 				&:before{
@@ -646,6 +647,31 @@ footer{
 
 				h3,p{
 					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 740px) and (min-width: 740px){
+	main{
+		.mainRing{
+			.subRing{
+				h2{
+					font-size: 0.8em;
+					padding: 40% 10%;
+				}
+
+				&#audioVideo,
+				&#heliumBaloons,
+				&#eventFurnitures,
+				&#eventAgency,
+				&#integrationClub{
+
+					&.active h2:before{
+						@include beforeContent(28%, 28%, 18%, 35%);
+						background-size: contain;
+					}
 				}
 			}
 		}
