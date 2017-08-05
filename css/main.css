@@ -230,6 +230,86 @@ a:hover {
     transform: rotate(0deg) translateX(-50%); }
   to {
     transform: rotate(-360deg) translateX(-50%); } }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; } }
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+
+  .column,
+  .columns {
+    margin-left: 3%; }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns {
+    width: 4.66666666667%; }
+
+  .two.columns {
+    width: 13.3333333333%; }
+
+  .three.columns {
+    width: 22%; }
+
+  .four.columns {
+    width: 30.6666666667%; }
+
+  .five.columns {
+    width: 39.3333333333%; }
+
+  .six.columns {
+    width: 48%; }
+
+  .seven.columns {
+    width: 56.6666666667%; }
+
+  .eight.columns {
+    width: 65.3333333333%; }
+
+  .nine.columns {
+    width: 74.0%; }
+
+  .ten.columns {
+    width: 82.6666666667%; }
+
+  .eleven.columns {
+    width: 91.3333333333%; }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; }
+
+  .one-third.column {
+    width: 30.6666666667%; }
+
+  .two-thirds.column {
+    width: 65.3333333333%; } }
+/* Larger than mobile */
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
 @font-face {
   font-family: 'Bebas Neue';
   src: url("./BebasNeue.otf"); }
@@ -547,6 +627,63 @@ footer {
       margin: 10px 0 0; }
     footer .footerExcerpt p {
       margin: 10px 0 20px; }
+
+.products body {
+  background: #fff;
+  color: #171717;
+  text-transform: none; }
+  .products body #mainView {
+    background: url("") top center no-repeat;
+    background-size: cover; }
+  .products body #weOffer {
+    background: #171717;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 35px 0 60px; }
+    .products body #weOffer ul {
+      font-family: 'Raleway', sans-serif; }
+      .products body #weOffer ul li {
+        list-style: disc;
+        width: 48.5%;
+        box-size: border-box;
+        display: inline-block; }
+        .products body #weOffer ul li:nth-of-type(2n+1) {
+          margin-right: 2%; }
+  .products body .sectionHeader {
+    width: 100%;
+    text-align: center;
+    color: #f00;
+    font-size: 3em; }
+  .products body .product {
+    text-align: center; }
+    .products body .product h4 {
+      color: #f00;
+      font-size: 25px; }
+    .products body .product img {
+      width: 100%; }
+    .products body .product .productPrice .startingPrice {
+      color: #f00;
+      font-family: 'Raleway', sans-serif; }
+      .products body .product .productPrice .startingPrice span {
+        font-size: 1.6em; }
+    .products body .product .productExcerpt {
+      color: rgba(255, 255, 255, 0.8);
+      background: #171717;
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+      padding: 15px 0 30px; }
+      .products body .product .productExcerpt ul {
+        padding: 0; }
+        .products body .product .productExcerpt ul li {
+          list-style: none; }
+    .products body .product .productAsk {
+      background: #f00;
+      font-size: 20px;
+      padding: 10px 0;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      width: 163px;
+      margin: -20px auto 0; }
 
 @media (max-width: 1600px) {
   body main .mainRing {

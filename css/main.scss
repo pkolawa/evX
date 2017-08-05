@@ -1,6 +1,7 @@
 @import 'boilerplate';
 @import 'animations';
 @import 'mixins';
+@import 'grid';
 
 @font-face { font-family: 'Bebas Neue'; src: url('./BebasNeue.otf'); }
 
@@ -313,6 +314,91 @@ footer{
 		}
 		p{
 			margin: 10px 0 20px;
+		}
+	}
+}
+
+.products{
+	body{
+		background: #fff;
+		color: #171717;
+		text-transform: none;
+
+		#mainView{
+			background: url('') top center no-repeat;
+			background-size: cover;
+		}
+		#weOffer{
+			background: #171717;
+			color: rgba(255,255,255, 0.8);
+			padding: 35px 0 60px;
+
+			ul{
+				font-family: 'Raleway', sans-serif;
+
+				li{
+					list-style: disc;
+					width: 48.5%;
+					box-size: border-box;
+					display: inline-block;
+					&:nth-of-type(2n+1){
+						margin-right: 2%;
+					}
+				}
+			}
+		}
+
+		.sectionHeader{
+			width: 100%;
+			text-align: center;
+			color: #f00;
+			font-size: 3em;
+		}
+		.product{
+			text-align: center;
+
+			h4{
+				color: #f00;
+				font-size: 25px;
+			}
+			img{
+				width: 100%;
+			}
+			.productPrice{
+				.startingPrice{
+					color: #f00;
+					font-family: 'Raleway', sans-serif;
+
+					span{
+						font-size: 1.6em;
+					}
+				}
+			}
+			.productExcerpt{
+				color: rgba(255,255,255, 0.8);
+				background: #171717;
+				font-family: 'Raleway', sans-serif;
+				font-size: 12px;
+				padding: 15px 0 30px;
+
+				ul{
+					padding: 0;
+
+					li{
+						list-style: none;
+					}
+				}
+			}
+			.productAsk{
+				background: #f00;
+				font-size: 20px;
+				padding: 10px 0;
+				color: #fff;
+				text-transform: uppercase;
+				text-align: center;
+				width: 163px;
+				margin: -20px auto 0;
+			}
 		}
 	}
 }
