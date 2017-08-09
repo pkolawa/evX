@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'grid';
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 @font-face { font-family: 'Bebas Neue'; src: url('./BebasNeue.otf'); }
 
 body{
@@ -17,10 +18,11 @@ body{
 	height: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
+	display: block;
 }
 
 .clr{
-	clear:both;
+	clear: both;
 }
 
 header{
@@ -319,86 +321,199 @@ footer{
 }
 
 .products{
-	body{
-		background: #fff;
-		color: #171717;
-		text-transform: none;
+	background: #fff;
+	color: #171717;
+	text-transform: none;
 
-		#mainView{
-			background: url('') top center no-repeat;
-			background-size: cover;
+	#mainView{
+		color: #fff;
+		background: url('../img/audio-video/main.jpg') top center no-repeat;
+		background-size: cover;
+		min-height: 480px;
+		text-align: center;
+
+		h2{
+			font-size: 51px;
+			margin-bottom: 20px;
 		}
-		#weOffer{
-			background: #171717;
-			color: rgba(255,255,255, 0.8);
-			padding: 35px 0 60px;
+		h3{
+			font-size: 20px;
+		}
+	}
+	#weOffer{
+		background: #171717;
+		color: rgba(255,255,255, 0.8);
+		padding: 35px 0 60px;
 
-			ul{
-				font-family: 'Raleway', sans-serif;
+		ul{
+			font-family: 'Raleway', sans-serif;
 
-				li{
-					list-style: disc;
-					width: 48.5%;
-					box-size: border-box;
-					display: inline-block;
-					&:nth-of-type(2n+1){
-						margin-right: 2%;
-					}
+			li{
+				list-style: disc;
+				width: 48.5%;
+				box-size: border-box;
+				display: inline-block;
+				&:nth-of-type(2n+1){
+					margin-right: 2%;
 				}
 			}
 		}
+	}
+	#longExcerpt{
+		background: url('../img/audio-video/excerpt.jpg') top center no-repeat;
+		background-size: cover;
+		min-height: 480px;
+		color: #fff;
 
-		.sectionHeader{
-			width: 100%;
-			text-align: center;
-			color: #f00;
-			font-size: 3em;
+		p{
+			font-family: 'Raleway', sans-serif;
+			line-height: 1.7em;
+			font-family: 14px;
 		}
-		.product{
-			text-align: center;
+	}
+	#productsDescription{
+		text-align: center;
 
-			h4{
-				color: #f00;
-				font-size: 25px;
+		.circle{
+			width: 20vw;
+			height: 20vw;
+			border-radius: 50%;
+			display: inline-block;
+			border: 2px solid rgba(0,0,0, 0.3);
+			color: rgba(0,0,0, 0.3);
+			font-size: 28px;
+			text-align: center;
+			padding: 40px;
+			line-height: 1em;
+
+			.count{
+				font-size: 80px;
+				line-height: 1.5em;
 			}
-			img{
-				width: 100%;
+		}
+	}
+
+	.container{
+		padding: 45px 0;
+	}
+	.sectionHeader{
+		width: 100%;
+		text-align: center;
+		color: #f00;
+		font-size: 3em;
+	}
+	.product{
+		text-align: center;
+
+		h4{
+			color: #f00;
+			font-size: 25px;
+		}
+		img{
+			width: 100%;
+		}
+		.productPrice{
+			.startingPrice{
+				color: #f00;
+				font-family: 'Raleway', sans-serif;
+
+				span{
+					font-size: 1.6em;
+				}
+			}
+			.nextPrice{
+				font-family: 'Raleway', sans-serif;
+				color: rgba(0,0,0, 0.8);
+			}
+		}
+		.productExcerpt{
+			color: rgba(255,255,255, 0.8);
+			background: #171717;
+			font-family: 'Raleway', sans-serif;
+			font-size: 12px;
+			padding: 15px 0 30px;
+
+			ul{
+				padding: 0;
+
+				li{
+					list-style: none;
+				}
+			}
+		}
+		&.six{
+			h4{
+				width: 48%;
+				margin-bottom: 10px;
+				display: inline-block;
+				text-align: left;
 			}
 			.productPrice{
-				.startingPrice{
-					color: #f00;
-					font-family: 'Raleway', sans-serif;
+				width: 48%;
+				display: inline-block;
+				text-align: right;
 
-					span{
-						font-size: 1.6em;
-					}
+				.startingPrice{
+					margin-bottom: 5px;
+				}
+				.nextPrice{
+					margin: 0 0 15px;
 				}
 			}
 			.productExcerpt{
-				color: rgba(255,255,255, 0.8);
-				background: #171717;
-				font-family: 'Raleway', sans-serif;
-				font-size: 12px;
-				padding: 15px 0 30px;
-
 				ul{
-					padding: 0;
-
 					li{
-						list-style: none;
+						width: 48%;
+						margin-left: 2%;
+						display: inline-block;
+						&:nth-of-type(1){
+							margin-left: 0;
+						}
 					}
 				}
 			}
-			.productAsk{
-				background: #f00;
-				font-size: 20px;
-				padding: 10px 0;
-				color: #fff;
-				text-transform: uppercase;
-				text-align: center;
-				width: 163px;
-				margin: -20px auto 0;
+		}
+		&.nine{
+			h4{
+				width: 48%;
+				margin-bottom: 10px;
+				display: inline-block;
+				text-align: left;
 			}
+			.productPrice{
+				width: 48%;
+				display: inline-block;
+				text-align: right;
+
+				.startingPrice{
+					margin-bottom: 5px;
+				}
+				.nextPrice{	margin: 0 0 15px;
+				}
+
+			}
+			.productExcerpt{
+				ul{
+					li{
+						width: 31%;
+						margin-left: 2%;
+						display: inline-block;
+						&:nth-of-type(1){
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+		.productAsk{
+			background: #f00;
+			font-size: 20px;
+			padding: 10px 0;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			width: 163px;
+			margin: -20px auto 0;
 		}
 	}
 }
