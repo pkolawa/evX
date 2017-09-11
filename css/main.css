@@ -241,17 +241,55 @@ a:hover {
 
 .column,
 .columns {
-  width: 100%;
+  width: 90%;
   float: left;
+  margin-left: 0 5%;
   box-sizing: border-box; }
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
     width: 85%;
-    padding: 0; } }
-/* For devices larger than 550px */
+    padding: 0; }
+
+  .one.column,
+  .one.columns,
+  .two.columns,
+  .three.columns,
+  .four.columns,
+  .five.columns,
+  .six.columns,
+  .seven.columns,
+  .eight.columns,
+  .nine.columns,
+  .ten.columns,
+  .eleven.columns,
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; } }
+/* Larger than mobile */
+/* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  .one.column,
+  .one.columns,
+  .two.columns,
+  .three.columns,
+  .four.columns,
+  .five.columns,
+  .six.columns {
+    width: 47%;
+    margin: 0 1.5%; }
+
+  .seven.columns,
+  .eight.columns,
+  .nine.columns,
+  .ten.columns,
+  .eleven.columns,
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; } }
+/* Larger than tablet */
+@media (min-width: 768px) {
   .container {
     width: 80%; }
 
@@ -306,9 +344,6 @@ a:hover {
 
   .two-thirds.column {
     width: 65.3333333333%; } }
-/* Larger than mobile */
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
 @font-face {
@@ -606,7 +641,8 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 120px; }
+  height: 120px;
+  overflow: hidden; }
   footer div[class^="footer"] {
     display: inline-block;
     vertical-align: middle; }
@@ -672,17 +708,18 @@ footer {
     .products #productsDescription .circle {
       width: 20vw;
       height: 20vw;
+      margin: 3vw;
       border-radius: 50%;
       display: inline-block;
       border: 2px solid rgba(0, 0, 0, 0.3);
       color: rgba(0, 0, 0, 0.3);
-      font-size: 28px;
+      font-size: 2vw;
       text-align: center;
-      padding: 40px;
+      padding: 2.4vw;
       line-height: 1em; }
       .products #productsDescription .circle .count {
-        font-size: 80px;
-        line-height: 1.5em; }
+        font-size: 7vw;
+        line-height: 10.5vw; }
   .products .container {
     padding: 45px 0; }
   .products .sectionHeader {
@@ -762,6 +799,22 @@ footer {
       text-align: center;
       width: 163px;
       margin: -20px auto 0; }
+  .products footer {
+    position: relative;
+    color: #fff;
+    background: none;
+    height: auto; }
+    .products footer .footerSocials {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2); }
+    .products footer .footerList {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      float: none; }
+    .products footer .footerExcerpt {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      float: none; }
 
 @media (max-width: 1600px) {
   body main .mainRing {
@@ -819,6 +872,10 @@ footer {
         width: 45px;
         height: 45px; } }
 @media (max-width: 768px) {
+  .products #weOffer ul li {
+    margin: 0 auto 20px;
+    vertical-align: top; }
+
   body footer .footerList {
     width: 50%; }
     body footer .footerList ul {
@@ -908,6 +965,10 @@ footer {
         body footer .footerExcerpt#kontakt {
           text-align: right; } }
 @media (max-width: 480px) {
+  .products #weOffer ul li {
+    width: 90%;
+    margin: 0 auto; }
+
   footer {
     height: auto;
     text-align: center; }
@@ -938,7 +999,23 @@ footer {
     margin: 0;
     display: block; }
     body footer .footerExcerpt h3, body footer .footerExcerpt p {
-      text-align: center; } }
+      text-align: center; }
+
+  .products #productsDescription .circle {
+    width: 80vw;
+    height: 80vw;
+    margin: 8vw 8vw 8vw 10vw;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 8vw;
+    text-align: center;
+    padding: 10vw;
+    line-height: 1em; }
+    .products #productsDescription .circle .count {
+      font-size: 30vw;
+      line-height: 1.2em; } }
 @media (max-height: 740px) and (min-width: 740px) {
   main .mainRing .subRing h2 {
     font-size: 0.8em;
