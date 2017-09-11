@@ -318,7 +318,7 @@ a:hover {
     width: 39.3333333333%; }
 
   .six.columns {
-    width: 48%; }
+    width: 47%; }
 
   .seven.columns {
     width: 56.6666666667%; }
@@ -364,6 +364,21 @@ body {
 
 .clr {
   clear: both; }
+
+#carousel {
+  width: 80%;
+  height: 40vh;
+  max-width: 400px;
+  max-height: 300px;
+  display: relative;
+  margin: 0 auto; }
+
+#carousel img {
+  display: hidden;
+  /* hide images until carousel prepares them */
+  cursor: pointer;
+  width: 50%;
+  /* not needed if you wrap carousel items in links */ }
 
 header {
   position: fixed;
@@ -669,7 +684,44 @@ footer {
 .products {
   background: #fff;
   color: #171717;
-  text-transform: none; }
+  text-transform: none;
+  padding-bottom: 0; }
+  .products #galleryDetail {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: -10px;
+    left: 0;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out; }
+    .products #galleryDetail img {
+      width: 50%;
+      height: auto;
+      margin: -10vh 25%;
+      transition: 0.5s ease-in-out;
+      -ms-transition: 0.5s ease-in-out;
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out; }
+    .products #galleryDetail.shown {
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      transition: 0.5s ease-in-out;
+      -ms-transition: 0.5s ease-in-out;
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out; }
+      .products #galleryDetail.shown img {
+        margin: 10vh 25%;
+        transition: 0.5s ease-in-out;
+        -ms-transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out; }
+        .products #galleryDetail.shown img:hover {
+          cursor: pointer; }
   .products #mainView {
     color: #fff;
     background: url("../img/audio-video/main.jpg") top center no-repeat;
@@ -703,11 +755,36 @@ footer {
       font-family: 'Raleway', sans-serif;
       line-height: 1.7em;
       font-family: 14px; }
+  .products #productsGallery .gallerySlider:before {
+    content: '';
+    display: block;
+    width: 8vw;
+    height: 8vw;
+    background: #f00;
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    left: 36%;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out; }
+  .products #productsGallery .gallerySlider:hover:before {
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out; }
   .products #productsDescription {
     text-align: center; }
     .products #productsDescription .circle {
       width: 20vw;
       height: 20vw;
+      max-width: 238px;
+      max-height: 238px;
       margin: 3vw;
       border-radius: 50%;
       display: inline-block;

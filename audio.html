@@ -19,6 +19,9 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- div for gallery overlay -->
+        <div id="galleryDetail" class=""></div>
+
         <!-- Add your site or application content here -->
 		<header>
 			<div class="wrapper">
@@ -40,6 +43,10 @@
 				<div class="container">
 					<h2>Wypożyczalnia sprzętu audio i video</h2>
 					<h3>Dostarczamy sprzęt na każde ważne wydarzenie w Twoim mieście</h3>
+                    <div class="searchBar">
+                        <input class="searchInput" type="text" name="searchProduct" placeholder=""/>
+                        <div class="searchButton" style="width: 40px; height: 40px; background: #f00;"></div>
+                    </div>
 				</div>
 			</div>
 			<div id="firstProducts" class="wrapper">
@@ -275,6 +282,17 @@
 			</div>
 			<div id="productsGallery" class="wrapper">
 				<div class="container">
+                    <div id="carousel" class="gallerySlider">
+                        <img src="./img/produkt.jpg" alt="Image 1" />
+                        <img src="./img/produkt.jpg" alt="Image 2" />
+                        <img src="./img/produkt.jpg" alt="Image 3" />
+                        <img src="./img/produkt.jpg" alt="Image 4" />
+                        <img src="./img/produkt.jpg" alt="Image 5" />
+                    </div>
+                </div>
+			</div>
+			<div id="productsDescription" class="wrapper">
+                <div class="container">
 					<div class="row">
 						<div class="three columns product">
 							<h4>Telewizory</h4>
@@ -494,8 +512,6 @@
 					</div>
 				</div>
 				<div class="clr"></div>
-			</div>
-			<div id="productsDescription" class="wrapper">
 				<div class="container">
 					<div class="sectionHeader">NAGŁÓWEK DZIAŁU</div>
 					<p>
@@ -583,8 +599,11 @@
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="./js/jquery.waterwheelCarousel.min.js"></script>
         <script src="./js/plugins.js"></script>
+        <!-- <script src="./js/main.js"></script> -->
         <script src="./js/main.js"></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- <script>

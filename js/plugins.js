@@ -21,4 +21,40 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+//Method mapping all products on page
+function mapProducts(selector){
+    var products = [];
+
+    $(selector).each(function(){
+        products.push($(this).text());
+    });
+
+    return products;
+}
+
+//Listener for searchBox
+$(document).ready(function(){
+
+    if($('body').hasClass('products')){
+        var productsList = mapProducts('h4');
+
+        $('.searchButton').on('click', function(){
+            $(this).siblings('.searchInput')[0].value;
+        });
+
+        //Instantiate carousel
+        $("#carousel").waterwheelCarousel({
+            clickedCenter: function($clickedItem) {
+                var image = new Image();
+                image.src = $clickedItem.attr('src');
+                image.onload = function(){
+                    $('#galleryDetail').append(image).toggleClass('shown');
+                };
+            }
+        });
+
+        $('#galleryDetail').on('click', function(){
+            $(this).toggleClass('shown').children('img').remove();
+        });
+    }
+});

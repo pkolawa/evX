@@ -1,10 +1,4 @@
-$(document).ready(function(){
-	mainRingResize();
-});
 
-$(window).resize(function(){
-	mainRingResize();
-});
 
 function mainRingResize(){
 	var headerHeight = $('header').height();
@@ -50,4 +44,12 @@ $('.subsectionTrigger').on('click', function(){
 
 $('.menuButton').on('click', function() {
   $('.mainMenu').toggleClass('expanded');
+});
+
+$(document).ready(function(){
+	mainRingResize();
+});
+
+$(window).resize(function(){
+	mainRingResize();
 });
