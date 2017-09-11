@@ -44,6 +44,8 @@ $(document).ready(function(){
 
         //Instantiate carousel
         $("#carousel").waterwheelCarousel({
+            separation: parseInt($(window).width() * 0.185),
+            sizeMultiplier: 0.9,
             clickedCenter: function($clickedItem) {
                 var image = new Image();
                 image.src = $clickedItem.attr('src');

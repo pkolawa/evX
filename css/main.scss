@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @font-face { font-family: 'Bebas Neue'; src: url('./BebasNeue.otf'); }
 
+$red: #f00;
+
 body{
 	text-transform: uppercase;
 	color: #fff;
@@ -26,10 +28,8 @@ body{
 }
 
 #carousel {
-  width: 80%;
-  height: 40vh;
-  max-width: 400px;
-  max-height: 300px;
+  width: 100%;
+  height: 600px;
   display: relative;
   margin: 0 auto;
 }
@@ -83,7 +83,7 @@ header{
 			margin: 0 10px;
 
 			&.active{
-				color: #f00;
+				color: $red;
 
 				&:before{
 					content: '';
@@ -92,7 +92,7 @@ header{
 					position: absolute;
 					top: 20px;
 					left: 48%;
-					background: #f00;
+					background: $red;
 					border-radius: 50%;
 				}
 			}
@@ -163,7 +163,7 @@ main{
 		    transform: translateX(-50%);
 
 			&.active{
-			   background: #f00;
+			   background: $red;
 
 			   h2{
 				   margin-top: 30px;
@@ -274,7 +274,7 @@ main{
 			}
 
 		    a{
-			   background: #f00;
+			   background: $red;
 			   position: absolute;
 			   left: 50%;
 			   transform: translateX(-50%);
@@ -353,7 +353,7 @@ footer{
 		img{
 			width: 50%;
 			height: auto;
-			margin: -10vh 25%;
+			margin: -10vh 25% 0;
 			@include transition(0.5s, ease-in-out);
 		}
 
@@ -365,7 +365,7 @@ footer{
 			@include transition(0.5s, ease-in-out);
 
 			img{
-				margin: 10vh 25%;
+				margin-top: 10vh;
 				@include transition(0.5s, ease-in-out);
 
 				&:hover{
@@ -430,10 +430,10 @@ footer{
 				display: block;
 				width: 8vw;
 				height: 8vw;
-				background: #f00;
+				background: $red;
 				position: absolute;
 				z-index: 10;
-				top: 30%;
+				bottom: 30%;
 				left: 36%;
 				opacity: 1;
 				@include transition(0.5s, ease-in-out);
@@ -441,9 +441,10 @@ footer{
 			&:hover{
 				&:before{
 					cursor: pointer;
-					z-index: 1;
 					opacity: 0;
-					@include transition(0.5s, ease-in-out);
+					bottom: -2vw;
+					height: 2vw;
+					@include transition(0.2s, ease-in-out);
 				}
 			}
 		}
@@ -472,6 +473,10 @@ footer{
 			}
 		}
 	}
+	#mapa{
+		width: 100%;
+		height: 50vh;
+	}
 
 	.container{
 		padding: 45px 0;
@@ -479,14 +484,15 @@ footer{
 	.sectionHeader{
 		width: 100%;
 		text-align: center;
-		color: #f00;
+		color: $red;
 		font-size: 3em;
 	}
 	.product{
 		text-align: center;
+		margin-bottom: 20px;
 
 		h4{
-			color: #f00;
+			color: $red;
 			font-size: 25px;
 		}
 		img{
@@ -494,7 +500,7 @@ footer{
 		}
 		.productPrice{
 			.startingPrice{
-				color: #f00;
+				color: $red;
 				font-family: 'Raleway', sans-serif;
 
 				span{
@@ -586,7 +592,7 @@ footer{
 			}
 		}
 		.productAsk{
-			background: #f00;
+			background: $red;
 			font-size: 20px;
 			padding: 10px 0;
 			color: #fff;
@@ -716,10 +722,10 @@ footer{
 					h2{
 
 						&:before{
-							width: 40px;
-							height: 40px;
+							width: 5vw;
+							height: 5vw;
 							top: 30px;
-							left: 34%;
+							left: 47.5vw;
 							background-size: contain;
 						}
 					}
@@ -824,7 +830,7 @@ footer{
 					margin: 0;
 
 					&.active{
-						color: #f00;
+						color: $red;
 
 						&:before{
 							display: none;

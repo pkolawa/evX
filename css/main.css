@@ -366,10 +366,8 @@ body {
   clear: both; }
 
 #carousel {
-  width: 80%;
-  height: 40vh;
-  max-width: 400px;
-  max-height: 300px;
+  width: 100%;
+  height: 600px;
   display: relative;
   margin: 0 auto; }
 
@@ -700,7 +698,7 @@ footer {
     .products #galleryDetail img {
       width: 50%;
       height: auto;
-      margin: -10vh 25%;
+      margin: -10vh 25% 0;
       transition: 0.5s ease-in-out;
       -ms-transition: 0.5s ease-in-out;
       -webkit-transition: 0.5s ease-in-out;
@@ -715,7 +713,7 @@ footer {
       -webkit-transition: 0.5s ease-in-out;
       -moz-transition: 0.5s ease-in-out; }
       .products #galleryDetail.shown img {
-        margin: 10vh 25%;
+        margin-top: 10vh;
         transition: 0.5s ease-in-out;
         -ms-transition: 0.5s ease-in-out;
         -webkit-transition: 0.5s ease-in-out;
@@ -763,7 +761,7 @@ footer {
     background: #f00;
     position: absolute;
     z-index: 10;
-    top: 30%;
+    bottom: 30%;
     left: 36%;
     opacity: 1;
     transition: 0.5s ease-in-out;
@@ -772,12 +770,13 @@ footer {
     -moz-transition: 0.5s ease-in-out; }
   .products #productsGallery .gallerySlider:hover:before {
     cursor: pointer;
-    z-index: 1;
     opacity: 0;
-    transition: 0.5s ease-in-out;
-    -ms-transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out; }
+    bottom: -2vw;
+    height: 2vw;
+    transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out; }
   .products #productsDescription {
     text-align: center; }
     .products #productsDescription .circle {
@@ -797,6 +796,9 @@ footer {
       .products #productsDescription .circle .count {
         font-size: 7vw;
         line-height: 10.5vw; }
+  .products #mapa {
+    width: 100%;
+    height: 50vh; }
   .products .container {
     padding: 45px 0; }
   .products .sectionHeader {
@@ -805,7 +807,8 @@ footer {
     color: #f00;
     font-size: 3em; }
   .products .product {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
     .products .product h4 {
       color: #f00;
       font-size: 25px; }
@@ -937,10 +940,10 @@ footer {
   main .mainRing .subRing {
     font-size: 0.2em; }
     main .mainRing .subRing#audioVideo.active h2:before, main .mainRing .subRing#heliumBaloons.active h2:before, main .mainRing .subRing#eventFurnitures.active h2:before, main .mainRing .subRing#eventAgency.active h2:before, main .mainRing .subRing#integrationClub.active h2:before {
-      width: 40px;
-      height: 40px;
+      width: 5vw;
+      height: 5vw;
       top: 30px;
-      left: 34%;
+      left: 47.5vw;
       background-size: contain; }
     main .mainRing .subRing.active ~ .ringsExcerpt {
       font-size: 0.18em; }

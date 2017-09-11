@@ -280,8 +280,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="productsGallery" class="wrapper">
-				<div class="container">
+			<div id="productsGallery" class="">
+				<div class="">
                     <div id="carousel" class="gallerySlider">
                         <img src="./img/produkt.jpg" alt="Image 1" />
                         <img src="./img/produkt.jpg" alt="Image 2" />
@@ -534,6 +534,7 @@
 					</div>
 				</div>
 			</div>
+            <div id="mapa"></div>
 		</main>
 
 		<footer>
@@ -604,6 +605,20 @@
         <!-- <script src="./js/main.js"></script> -->
         <script src="./js/main.js"></script>
 
+        <script>
+            function initMap() {
+                var aleja_pokoju = {lat: 50.0598279, lng: 19.9620433};
+                var map = new google.maps.Map(document.getElementById('mapa'), {
+                  zoom: 16,
+                  center: aleja_pokoju
+                });
+                var marker = new google.maps.Marker({
+                  position: aleja_pokoju,
+                  map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTlhIosXbzgBFeKoIIxesva9pSiioxjPc&callback=initMap"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- <script>
